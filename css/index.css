@@ -27,7 +27,7 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	/* display: block; */
 }
 body {
 	line-height: 1;
@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
+
   width: 880px;
   /* TB LR */
   margin: 0 auto;
@@ -73,10 +74,12 @@ h1, h2, h3, h4, h5 {
 /* header */
 
 header nav {
-  display: inline-block;
-  width: 691px;
-  vertical-align: top;
-  margin-top: 35px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	  
+  /* vertical-align: top; */
+  /* margin-top: 35px; */
 }
 
 header nav a {
@@ -102,6 +105,21 @@ header .logo {
   margin-top: 25px;
 }
 
+@media(max-width: 800px) { 
+	.container header {
+		display; flex;
+		flex-direction: column-reverse;
+		border: 1px solid red;
+		order: -1;
+	}
+	.container .cta .hidden {
+		visibility: hidden;
+	}
+}
+
+@media(max-width: 500px) {
+
+}
 /* cta */
 
 .cta .cta-text {
@@ -132,6 +150,7 @@ header .logo {
   display: inline-block;
   margin-top: 69px;
 }
+
 
 .main-content {
   border-top: 1px solid black;
