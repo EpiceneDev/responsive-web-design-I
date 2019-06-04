@@ -73,13 +73,23 @@ h1, h2, h3, h4, h5 {
 
 /* header */
 
+header {
+	display: flex;
+	
+	justify-content: center;
+	  
+  vertical-align: top;
+  margin-top: 35px;
+}
+
+
 header nav {
 	display: flex;
-	flex-wrap: wrap;
+	
 	justify-content: space-between;
 	  
-  /* vertical-align: top; */
-  /* margin-top: 35px; */
+  vertical-align: top;
+  margin-top: 35px;
 }
 
 header nav a {
@@ -102,23 +112,49 @@ header nav a:last-child {
 }
 
 header .logo {
-  margin-top: 25px;
+  margin: 25px 0 0 15px;
 }
 
 @media(max-width: 800px) { 
 	.container header {
 		display; flex;
 		flex-direction: column-reverse;
-		border: 1px solid red;
-		order: -1;
 	}
+
+	.container header nav {
+		display: flex;
+		justify-content: center;
+	}
+
+	.container header .nav-img {
+		display: flex;
+		justify-content: center;
+	}
+
 	.container .cta .hidden {
-		visibility: hidden;
+		display: none;
+	}
+
+	.container .cta-text {
+		display: flex;
+		width: 100%;
 	}
 }
 
 @media(max-width: 500px) {
+	.container header {
+		display; flex;
+		/* flex-direction: column; */
+		
+	}
+	.container .cta .hidden {
+		display: none;
+	}
 
+	.container .cta-text {
+		display: flex;
+		width: 100%;
+	}
 }
 /* cta */
 
@@ -147,7 +183,7 @@ header .logo {
 }
 
 .cta img {
-  display: inline-block;
+  display: inline-flex;
   margin-top: 69px;
 }
 
